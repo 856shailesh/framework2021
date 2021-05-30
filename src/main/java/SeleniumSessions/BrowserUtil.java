@@ -69,6 +69,10 @@ public class BrowserUtil {
 		return driver.getCurrentUrl();
 	}
 	
+	public String doGetPageSource() {
+		return driver.getPageSource();
+	}
+	
 	public void closeBrowser() {
 		driver.close();
 	}

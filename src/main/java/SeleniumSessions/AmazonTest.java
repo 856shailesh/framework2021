@@ -8,8 +8,10 @@ public class AmazonTest {
 		String browserName = "chrome";
 		BrowserUtil br = new BrowserUtil();
 		
-		WebDriver driver = br.initDriver(browserName);
+		WebDriver driver = br.initDriver(browserName); // keep it like this for now
 		br.launchURL("https://amazon.in");
+		
+		System.out.println(br.doGetPageSource());
 		
 		String title = br.doGetTitle();
 		System.out.println("Title is " + title);
