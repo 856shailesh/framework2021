@@ -1,4 +1,4 @@
-package SeleniumSessions;
+package com.shailesh.seleniumSessions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

@@ -1,4 +1,4 @@
-package SeleniumSessions;
+package com.shailesh.seleniumSessions;
 
 import java.util.List;
 

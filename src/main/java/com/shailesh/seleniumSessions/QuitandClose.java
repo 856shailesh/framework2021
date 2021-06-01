@@ -1,9 +1,9 @@
-package SeleniumSessions;
+package com.shailesh.seleniumSessions;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class webdriverBasics {
+public class QuitandClose {
 
 	public static void main(String[] args) {
 
@@ -19,6 +19,9 @@ public class webdriverBasics {
 		System.out.println(driver.getCurrentUrl());
 		
 		driver.quit();
+		//driver.close(); //close the browser
+		
+		System.out.println(driver.getTitle());
 
 	}
 
