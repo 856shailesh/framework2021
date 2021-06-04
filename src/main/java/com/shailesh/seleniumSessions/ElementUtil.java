@@ -3,6 +3,7 @@ package com.shailesh.seleniumSessions;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,7 +37,7 @@ public class ElementUtil {
 	/*
 	 * Drop Down util These are for select tags where tag = select
 	 * 
-	 */
+	 */ 
 
 	public void doSelectDropDownByIndex(By locator, int index) {
 		Select sel = new Select(getElement(locator));
@@ -116,5 +117,27 @@ public class ElementUtil {
 		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		WebElement element = wait.until(ExpectedConditions.visibilityOf(getElement(locator)));
 		return element;
+	}
+	
+	
+	private Alert waitForAlert(int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		return wait.until(ExpectedConditions.alertIsPresent());
+	}
+
+	public void acceptAlert(int timeOut) {
+		waitForAlert(timeOut).accept();
+	}
+
+	public void dismissAlert(int timeOut) {
+		waitForAlert(timeOut).dismiss();
+	}
+
+	public String alertGetText(int timeOut) {
+		return waitForAlert(timeOut).getText();
+	}
+
+	public void alertSendKeys(int timeOut, String value) {
+		waitForAlert(timeOut).sendKeys(value);
 	}
 }
