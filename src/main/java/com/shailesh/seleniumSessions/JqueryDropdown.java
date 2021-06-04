@@ -35,7 +35,7 @@ public class JqueryDropdown {
 
 		By choices = By.cssSelector("span.comboTreeItemTitle");
 		//selectChoice(choices, "choice 1");
-		selectChoice(choices, "choice 7");
+		//selectChoice(choices, "choice 7");
 	}
 
 //	public static void selectChoice(By locator, String value) {

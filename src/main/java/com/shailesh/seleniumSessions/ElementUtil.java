@@ -6,7 +6,9 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementUtil {
 	WebDriver driver;
@@ -92,5 +94,27 @@ public class ElementUtil {
 				break;
 			}
 		}
+	}
+	
+	/************* wait utils **************/
+	/*
+	 * An expectation for checking that an element is present on the DOM of a page.
+	 * This does notnecessarily mean that the element is visible.
+	 */
+	public WebElement doPresenceofElement(By locator, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		return element;
+	}
+	
+	/*
+	 * An expectation for checking that an element is present on the DOM of a page and visible.
+	 * Visibility means that the element is not only displayed but also has a height and width that isgreater than 0.
+	 * dont forget to add getelement bcs it takes Xpath and we are giving By locator
+	 */
+	public WebElement isElementVisible(By locator, int timeout) {
+		WebDriverWait wait = new WebDriverWait(driver, timeout);
+		WebElement element = wait.until(ExpectedConditions.visibilityOf(getElement(locator)));
+		return element;
 	}
 }
