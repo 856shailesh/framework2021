@@ -37,7 +37,7 @@ public class ElementUtil {
 	/*
 	 * Drop Down util These are for select tags where tag = select
 	 * 
-	 */ 
+	 */
 
 	public void doSelectDropDownByIndex(By locator, int index) {
 		Select sel = new Select(getElement(locator));
@@ -96,7 +96,7 @@ public class ElementUtil {
 			}
 		}
 	}
-	
+
 	/************* wait utils **************/
 	/*
 	 * An expectation for checking that an element is present on the DOM of a page.
@@ -107,19 +107,19 @@ public class ElementUtil {
 		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		return element;
 	}
-	
+
 	/*
-	 * An expectation for checking that an element is present on the DOM of a page and visible.
-	 * Visibility means that the element is not only displayed but also has a height and width that isgreater than 0.
-	 * dont forget to add getelement bcs it takes Xpath and we are giving By locator
+	 * An expectation for checking that an element is present on the DOM of a page
+	 * and visible. Visibility means that the element is not only displayed but also
+	 * has a height and width that isgreater than 0. dont forget to add getelement
+	 * bcs it takes Xpath and we are giving By locator
 	 */
 	public WebElement isElementVisible(By locator, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, timeout);
 		WebElement element = wait.until(ExpectedConditions.visibilityOf(getElement(locator)));
 		return element;
 	}
-	
-	
+
 	private Alert waitForAlert(int timeOut) {
 		WebDriverWait wait = new WebDriverWait(driver, timeOut);
 		return wait.until(ExpectedConditions.alertIsPresent());
@@ -139,5 +139,27 @@ public class ElementUtil {
 
 	public void alertSendKeys(int timeOut, String value) {
 		waitForAlert(timeOut).sendKeys(value);
+	}
+
+	/****************** Frame Wait ************/
+
+	public void waitForFrameAndSwitch(String nameOrID, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(nameOrID));
+	}
+
+	public void waitForFrameAndSwitch(By frameLocator, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameLocator));
+	}
+
+	public void waitForFrameAndSwitch(int frameIndex, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameIndex));
+	}
+
+	public void waitForFrameAndSwitch(WebElement frameElement, int timeOut) {
+		WebDriverWait wait = new WebDriverWait(driver, timeOut);
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameElement));
 	}
 }
