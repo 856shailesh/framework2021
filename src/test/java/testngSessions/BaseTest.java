@@ -2,7 +2,6 @@ package testngSessions;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -16,7 +15,7 @@ public class BaseTest {
 
 	public WebDriver driver;
 
-	@Parameters({"browser", "url"})
+	@Parameters({ "browser", "url" })
 	@BeforeTest
 	public void setup(String browserName, String url) {
 
@@ -28,8 +27,7 @@ public class BaseTest {
 		} else if (browserName.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
-		}
-		else {
+		} else {
 			System.out.println("Please pass the correct browser name....");
 		}
 

@@ -1,305 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="5" failed="0" ignored="0" total="5" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="53" started-at="2021-06-18T16:00:46 IST" finished-at="2021-06-18T16:00:46 IST">
+  <suite name="Open cart test suite " duration-ms="36625" started-at="2021-06-20T10:46:03 IST" finished-at="2021-06-20T10:46:39 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="53" started-at="2021-06-18T16:00:46 IST" finished-at="2021-06-18T16:00:46 IST">
-      <class name="testngSessions.LoginPageNegativeTest">
-        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:testngSessions.LoginPageNegativeTest@419c5f1a]" name="setup" is-config="true" duration-ms="-1624012246604" started-at="2021-06-18T16:00:46 IST" finished-at="1970-01-01T05:30:00 IST">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:268)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
-at org.testng.TestRunner.beforeRun(TestRunner.java:607)
-at org.testng.TestRunner.run(TestRunner.java:578)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+    <test name="Search different products" duration-ms="36625" started-at="2021-06-20T10:46:03 IST" finished-at="2021-06-20T10:46:39 IST">
+      <class name="testngSessions.SearchProducts">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:testngSessions.SearchProducts@6193932a]" name="setup" is-config="true" duration-ms="27399" started-at="2021-06-20T10:46:03 IST" finished-at="2021-06-20T10:46:30 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://demo.opencart.com/index.php?route=account/login]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="SKIP" signature="doLogin(java.lang.String, java.lang.String)[pri:0, instance:testngSessions.LoginPageNegativeTest@419c5f1a]" name="doLogin" duration-ms="0" started-at="2021-06-18T16:00:46 IST" data-provider="loginNegativeData" finished-at="2021-06-18T16:00:46 IST">
+        <test-method status="PASS" signature="loginToApp()[pri:0, instance:testngSessions.SearchProducts@6193932a]" name="loginToApp" is-config="true" duration-ms="3815" started-at="2021-06-20T10:46:30 IST" depends-on-methods="testngSessions.BaseTest.setup" finished-at="2021-06-20T10:46:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToApp -->
+        <test-method status="PASS" signature="register(java.lang.String)[pri:0, instance:testngSessions.SearchProducts@6193932a]" name="register" duration-ms="1701" started-at="2021-06-20T10:46:34 IST" data-provider="registerData" finished-at="2021-06-20T10:46:36 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[test@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@123]]>
+                <![CDATA[mac]]>
               </value>
             </param>
           </params>
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:268)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
-at org.testng.TestRunner.beforeRun(TestRunner.java:607)
-at org.testng.TestRunner.run(TestRunner.java:578)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLogin -->
-        <test-method status="SKIP" signature="doLogin(java.lang.String, java.lang.String)[pri:0, instance:testngSessions.LoginPageNegativeTest@419c5f1a]" name="doLogin" duration-ms="0" started-at="2021-06-18T16:00:46 IST" data-provider="loginNegativeData" finished-at="2021-06-18T16:00:46 IST">
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="register(java.lang.String)[pri:0, instance:testngSessions.SearchProducts@6193932a]" name="register" duration-ms="1397" started-at="2021-06-20T10:46:36 IST" data-provider="registerData" finished-at="2021-06-20T10:46:37 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[ ]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[test@123]]>
+                <![CDATA[modem]]>
               </value>
             </param>
           </params>
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:268)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
-at org.testng.TestRunner.beforeRun(TestRunner.java:607)
-at org.testng.TestRunner.run(TestRunner.java:578)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLogin -->
-        <test-method status="SKIP" signature="doLogin(java.lang.String, java.lang.String)[pri:0, instance:testngSessions.LoginPageNegativeTest@419c5f1a]" name="doLogin" duration-ms="0" started-at="2021-06-18T16:00:46 IST" data-provider="loginNegativeData" finished-at="2021-06-18T16:00:46 IST">
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="register(java.lang.String)[pri:0, instance:testngSessions.SearchProducts@6193932a]" name="register" duration-ms="1369" started-at="2021-06-20T10:46:37 IST" data-provider="registerData" finished-at="2021-06-20T10:46:38 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[test@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ ]]>
+                <![CDATA[Monitors]]>
               </value>
             </param>
           </params>
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:268)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
-at org.testng.TestRunner.beforeRun(TestRunner.java:607)
-at org.testng.TestRunner.run(TestRunner.java:578)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLogin -->
-        <test-method status="SKIP" signature="doLogin(java.lang.String, java.lang.String)[pri:0, instance:testngSessions.LoginPageNegativeTest@419c5f1a]" name="doLogin" duration-ms="0" started-at="2021-06-18T16:00:46 IST" data-provider="loginNegativeData" finished-at="2021-06-18T16:00:46 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ ]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[ ]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:268)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
-at org.testng.TestRunner.beforeRun(TestRunner.java:607)
-at org.testng.TestRunner.run(TestRunner.java:578)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doLogin -->
-        <test-method status="SKIP" signature="doLogin(java.lang.String, java.lang.String)[pri:0, instance:testngSessions.LoginPageNegativeTest@419c5f1a]" name="doLogin" duration-ms="0" started-at="2021-06-18T16:00:46 IST" data-provider="loginNegativeData" finished-at="2021-06-18T16:00:46 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeTest on method setup but has not been marked @Optional or defined
-in C:\Users\shailesh.kumar2\AppData\Local\Temp\testng-eclipse-719626533\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:268)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:166)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:301)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
-at org.testng.TestRunner.beforeRun(TestRunner.java:607)
-at org.testng.TestRunner.run(TestRunner.java:578)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-at org.testng.TestNG.runSuites(TestNG.java:1069)
-at org.testng.TestNG.run(TestNG.java:1037)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doLogin -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:testngSessions.LoginPageNegativeTest@419c5f1a]" name="tearDown" is-config="true" duration-ms="-1624012246653" started-at="2021-06-18T16:00:46 IST" finished-at="1970-01-01T05:30:00 IST">
+        </test-method> <!-- register -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testngSessions.SearchProducts@6193932a]" name="tearDown" is-config="true" duration-ms="910" started-at="2021-06-20T10:46:38 IST" finished-at="2021-06-20T10:46:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testngSessions.LoginPageNegativeTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testngSessions.SearchProducts -->
+    </test> <!-- Search different products -->
+  </suite> <!-- Open cart test suite  -->
 </testng-results>

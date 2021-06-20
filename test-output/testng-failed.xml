@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Open cart test suite ]" parallel="tests">
+  <test thread-count="2" name="Search different products(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://demo.opencart.com/index.php?route=account/login"/>
     <classes>
-      <class name="testngSessions.LoginPageNegativeTest">
+      <class name="testngSessions.SearchProducts">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="doLogin"/>
+          <include name="register" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- testngSessions.LoginPageNegativeTest -->
+      </class> <!-- testngSessions.SearchProducts -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Search different products(failed) -->
+</suite> <!-- Failed suite [Open cart test suite ] -->
